@@ -18,7 +18,11 @@
 // Link:
 // https://github.com/raspberrypi/FreeRTOS-Kernel/tree/main/portable/ThirdParty/GCC/RP2350_ARM_NTZ
 
-// Useful commands:
+// Useful commands for RP2350 using Raspberry Pi Debug Probe:
+// sudo openocd -f interface/cmsis-dap.cfg -f target/rp2350.cfg -c "adapter speed 5000" 
+// -c "rp2350.dap.core1 cortex_m reset_config sysresetreq" -c "program ftos_ble.elf verify reset exit"
+// or in one line
+// sudo openocd -f interface/cmsis-dap.cfg -f target/rp2350.cfg -c "adapter speed 5000" -c "rp2350.dap.core1 cortex_m reset_config sysresetreq" -c "program ftos_ble.elf verify reset exit"
 // minicom -b 115200 -o -D /dev/ttyACM0
 
 // Useful links:
